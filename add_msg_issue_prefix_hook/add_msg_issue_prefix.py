@@ -123,7 +123,7 @@ def main():
         tag_present = has_tag(content_subject, template)
         f.seek(0, 0)
         if issue_number and not tag_present:
-            prefix = template.format(issue_number)
+            prefix = template.format(issue_number).strip("[]")
             new_msg = modify_commit_message(content, prefix, insert_after)
             f.write(str(issue_number+" "+template.format(issue_number)))
         elif default and not tag_present:
