@@ -43,7 +43,7 @@ def modify_commit_message(content: str, issue_number: str,
     """
     if match := re.search(pattern, content):
         return match.group().strip() + \
-            " ".join(issue_number.strip(), content[match.end():].strip())
+            " ".join([issue_number.strip(), content[match.end():].strip()])
     return issue_number.strip() + " " + content
 
 
@@ -113,6 +113,7 @@ def main():
 
     if result := get_ticket_id_from_branch_name(pattern, branch):
         issue_number = result.upper()
+        issue_number = issue_number.strip('[]')
     else:
         issue_number = ""
     with open(commit_msg_filepath, "r+") as f:
