@@ -125,10 +125,10 @@ def main():
         if issue_number and not tag_present:
             prefix = template.format(issue_number)
             new_msg = modify_commit_message(content, prefix, insert_after)
-            f.write(str(default))
+            f.write(str(prefix))
         elif default and not tag_present:
             new_msg = modify_commit_message(content, default, insert_after)
-            f.write(str(default))
+            f.write(str(prefix))
         else:
             f.write(content)
 
