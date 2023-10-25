@@ -113,7 +113,8 @@ def main():
 
     if result := get_ticket_id_from_branch_name(pattern, branch):
         issue_number = result.upper()
-        issue_number = issue_number.strip('[]')
+        issue_number = issue_number.strip("[]")
+        issue_number = issue_number.strip("\[\]")
     else:
         issue_number = ""
     with open(commit_msg_filepath, "r+") as f:
