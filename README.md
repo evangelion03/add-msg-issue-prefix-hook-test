@@ -11,7 +11,7 @@ See also: https://github.com/pre-commit/pre-commit
 Add this to your `.pre-commit-config.yaml`
 
 ```yaml
--   repo: https://github.com/avilaton/add-msg-issue-prefix-hook
+-   repo: https://github.com/evangelion03/add-msg-issue-prefix-hook-test
     rev: v0.0.8  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-prefix
@@ -27,7 +27,7 @@ pre-commit install --hook-type prepare-commit-msg
 Change how the issue is rendered to the commit message using the `--template` argument.
 
 ```yaml
--   repo: https://github.com/avilaton/add-msg-issue-prefix-hook
+-   repo: https://github.com/evangelion03/add-msg-issue-prefix-hook-test
     rev: v0.0.8  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-prefix
@@ -41,7 +41,7 @@ Change how the issue is rendered to the commit message using the `--template` ar
 Change how the issue is rendered to the commit message using the `--default` argument.
 
 ```yaml
--   repo: https://github.com/avilaton/add-msg-issue-prefix-hook
+-   repo: https://github.com/evangelion03/add-msg-issue-prefix-hook-test
     rev: v0.0.8  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-prefix
@@ -55,7 +55,7 @@ Change how the issue is rendered to the commit message using the `--default` arg
 Customize where the issue key is inserted using regular expressions. The following example allows commit messages of the form `feat: add feature` to be updated to `feat: [ABC-123] add feature`.
 
 ```yaml
--   repo: https://github.com/avilaton/add-msg-issue-prefix-hook
+-   repo: https://github.com/evangelion03/add-msg-issue-prefix-hook-test
     rev: v0.0.8  # Use the ref you want to point at
     hooks:
     - id: add-msg-issue-prefix
