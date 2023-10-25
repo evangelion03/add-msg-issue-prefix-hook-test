@@ -75,7 +75,7 @@ def main():
     parser.add_argument(
         "-t",
         "--template",
-        default="[]",
+        default="[{}]",
         help="Template to render ticket id into",
     )
     parser.add_argument(
