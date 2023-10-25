@@ -44,7 +44,7 @@ def modify_commit_message(content: str, issue_number: str,
     if match := re.search(pattern, content):
         return match.group().strip() + \
             " ".join([issue_number.strip(), content[match.end():].strip()])
-    return issue_number.strip() + " " + content
+    return issue_number.strip().strip("[]").strip("\[\]") + " " + content
 
 
 def has_tag(content_subject: str, template: str) -> bool:
